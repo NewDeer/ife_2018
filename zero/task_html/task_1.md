@@ -1,7 +1,5 @@
 title: 凡心所向 素履以往
-date: 2018-04-24
-categories: ife_note
-tags: ife
+
 ---
 今天是ife开课的第一天，点进去第一个任务，题目为
 > 第一天：为什么有那么多人要做前端？
