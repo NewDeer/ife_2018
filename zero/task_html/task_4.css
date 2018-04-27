@@ -1,0 +1,65 @@
+body {
+  background: #efefef;
+  font-family: PingFang TC,sans-serif;
+}
+
+.container{
+  background: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+  max-width: 720px;
+  min-width: 420px;
+  margin: auto;
+  border-radius: 10px / 20px;
+  border: 2px solid #836FFF;
+}
+
+h1 {
+  text-shadow: 1px 1px 1px #000000;
+}
+
+header, footer {
+  text-align: center;
+  font-weight: bold;
+  padding-top: 5px;
+}
+
+h3 {
+  border-bottom: 1px solid #29B6F6;
+  text-indent: 20px;
+}
+
+h4 {
+  margin: 10px;
+}
+aside {
+  background-color: #29B6F6;
+  padding: 5px;
+  color: #fff;  
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  line-height: 25px;
+}
+
+p a, li a {
+  text-decoration: none;
+  color: #f25d8e;
+}
+
+aside a {
+  color: #fff;
+}
+
+a:hover {
+  border-bottom: 1px solid #836FFF;
+}
+.footer-image {
+  background-image: url(https://diygod.me/images/footer.png);
+  height: 368px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
