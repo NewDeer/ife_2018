@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>resume</title>
+	<link rel="stylesheet" type="text/css" href="style_1.css" title="style_1">
+	<link rel="alternate stylesheet" type="text/css" href="style_2.css" title="style_2">
+	<link rel="alternate stylesheet" type="text/css" href="style_3.css" title="style_3">
+</head>
+<body>
+	<div class="con">
+            <input type="button" id="style_1" value="样式一" />
+            <input type="button" id="style_2" value="样式二" />
+            <input type="button" id="style_3" value="样式三" />
+        </div>
+	<div class="container">
+		<div class="sidebar">
+			<header>
+				<h1>简历</h1>
+			</header>
+		</div>
+	
+	<div class="main">
+		<ul>
+			<li>
+				<h2>基本信息</h2>
+				<dl>
+					<dt>姓名</dt>
+					<dd>张三</dd>
+					<dt>性别</dt>
+					<dd>男</dd>
+					<dt>应聘职位</dt>
+					<dd>Web前端工程师</dd>
+				</dl>
+			</li>
+			<li>
+				<h2>联系方式</h2>
+				<dl>
+					<dt>手机</dt>
+					<dd>12312341234</dd>
+					<dt>Email</dt>
+					<dd><a href="mailto:joinefe@baidu.com" target="_blank">joinefe@baidu.com</a></dd>
+					<dt>个人主页</dt>
+					<dd><a href="#">Github</a></dd>
+				</dl>
+			</li>
+			<li>
+				<h2>能力描述</h2>
+				<ul>
+					<li>
+						<h3>技术能力</h3>
+						<p>熟练掌握HTML,CSS,JavaScript的拼写</p>
+					</li>
+					<li>
+						<h3>综合能力</h3>
+						<p>良好的沟通，主动积极，努力勤奋</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2>教育经历</h2>
+				<ul>
+					<li>
+						<h3>本科</h3>
+						<p>百度前端技术学院小薇学院</p>
+					</li>
+					<li>
+						<h3>研究生</h3>
+						<p>百度前端技术学院大斌学院</p>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<h2>项目经历</h2>
+				<ul>
+					<li>
+						<h3>小度小度</h3>
+						<p>作为前端工程师角色参与了ABC组件的开发</p>
+					</li>
+					<li>
+						<h3>SAN Doc</h3>
+						<p>作为文档工程师参与了SAN Doc编写</p>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	</div>
+	<script type="text/javascript">
+		// 对切换主题的按钮绑定事件，用来做触发
+		document.getElementById("style_1").addEventListener("click",function(){
+		    setStyleSheet("style_1");
+		});
+		document.getElementById("style_2").addEventListener("click",function(){
+		    setStyleSheet("style_2");
+		});
+		document.getElementById("style_3").addEventListener("click",function(){
+		    setStyleSheet("style_3");
+		});
+		/**
+		 * 查找所有的link标签，找到符合条件的css进行切换
+		 * @title:需要切换的css文件名称，也可以是某值，主要是能够找到所要切换的link标签
+		 **/
+		function setStyleSheet(title){  
+		    // 首先找到DOM中所有的link标签
+		    var link_list = document.getElementsByTagName("link");
+		    if ( link_list ){
+		        for ( var i=0;i<link_list.length;i++ ){
+		            // 要找到所有link中rel属性值包括style的，也就是包括stylesheet和alternate stylesheet;
+		            if ( link_list[i].getAttribute("rel").indexOf("style") != -1 ){
+		                // 将符合条件的link的disabled的属性设为true，都改为禁用；
+		                link_list[i].disabled = true;
+		                // 然后判断link标签中的title属性，找到我们需要替换的css文件
+		                // 找到后将该link的disabled改为启用；
+		                if ( link_list[i].getAttribute("title") === title){
+		                    link_list[i].disabled = false;
+		                }
+		            }
+		        }
+		    }
+		};
+	</script>
+</body>
+</html>

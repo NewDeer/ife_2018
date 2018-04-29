@@ -1,0 +1,78 @@
+.sidebar {
+	position: relative;
+	background-color: #858585;
+	color: #fff;
+	height: 120px;
+
+}
+
+h1 {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	margin: 40px;
+}
+
+h2 {
+	float: left;
+	width: 120px;
+	height: 150px;
+	background-color: #d6d6d6;
+	margin: 0;
+	box-sizing: border-box;
+	padding: 50px 10px;
+}
+h3 {
+	margin: 0;
+	float: left;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	list-style-type: none;
+	overflow: hidden;
+	border: 1px solid #fff;
+	border-top: 0;
+}
+
+ul li ul {
+	overflow: hidden;
+	height: 140px;
+	margin: 0;
+	border: 1px solid #d6d6d6;
+	border-top: 0;
+	padding: 10px 0 0 10px;
+}
+
+li p {
+	margin-top: 0;
+	font-size: 1.17em;
+}
+
+
+dl {
+	overflow: hidden;
+	height: 140px;
+	margin: 0;
+	border: 1px solid #d6d6d6;
+	border-top: 0;
+	padding: 10px 0 0 10px;
+	font-size: 1.17em;
+}
+
+dt, dd {
+	float: left;
+}
+
+dt {
+	font-weight: 700;
+}
+
+dd {
+	margin-left: 10px;
+	margin-right: 30px;
+}
