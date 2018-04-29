@@ -27,6 +27,10 @@ h3 {
 	float: left;
 }
 
+p {
+	margin: 0;
+}
+
 ul {
 	padding: 0;
 	margin: 0;
@@ -36,17 +40,19 @@ li {
 	list-style-type: none;
 	overflow: hidden;
 	border: 1px solid #fff;
-	border-top: 0;
+	border-bottom: 0;
 }
 
 ul li ul {
 	overflow: hidden;
-	height: 140px;
+	height: 139px;
 	margin: 0;
 	border: 1px solid #d6d6d6;
-	border-top: 0;
+	border-bottom: 0;
 	padding: 10px 0 0 10px;
 }
+
+
 
 li p {
 	margin-top: 0;
@@ -56,14 +62,17 @@ li p {
 
 dl {
 	overflow: hidden;
-	height: 140px;
+	height: 139px;
 	margin: 0;
 	border: 1px solid #d6d6d6;
-	border-top: 0;
+	border-bottom: 0;
 	padding: 10px 0 0 10px;
 	font-size: 1.17em;
 }
 
+li:first-child {
+	border: 0;
+}
 dt, dd {
 	float: left;
 }
