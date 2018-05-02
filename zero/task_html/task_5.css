@@ -2,6 +2,14 @@
 
 body {
 	margin: 0;
+	min-width: 960px;
+}
+
+ul {
+    padding: 0;
+}
+h1, p, ul {
+    margin: 0;
 }
 
 header {
@@ -47,14 +55,14 @@ header {
 }
 
 .banner {
-	height: 200px;
+	height: 300px;
 	background-color: #FAE3D9;
 	position: relative;
 }
 
 .show {
 	width: 960px;
-	height: 200px;
+	height: 240px;
 	position: absolute;
 	top: 0;
 	bottom: 0;
@@ -65,160 +73,92 @@ header {
 
 .time img {
 	width: 640px;
-	height: 160px;
-	margin: 10px 160px;
+	height: 240px;
+	margin: 0 160px;
+}
+
+.numbers {
+	position: absolute;
+    left: 50%;
+    bottom: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: 480px;
+    margin: 0;
 }
 
 .number {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-}
-
-.number ul {
-	display: flex;
-	margin-bottom: 0;
-	align-items: center;
-  	justify-content: space-around;
-}
-
-.number li {
-	list-style-type: none;
-	color: #61C0BF;
-	padding: 10px;
-	height: 10px;
-	border: 2px solid #FFB6B9;
-	margin: 2px;
-}
-
-.info-box {
-	width: 960px;
-	height: 950px;
-	margin: 0 auto;
-	box-sizing: border-box;
-}
-
-.info-box ul {
-	padding-left: 0;
-	margin-top: 0;
-	overflow: hidden;
-	margin: 10px 0;
-	border-bottom: 1px solid #9e9e9e;
-}
-
-.info-box li {
-	float: left;
-	list-style-type: none;
-	width: 150px;
-	border: 1px solid #9e9e9e;
-
-}
-
-.info-box li a {
-	display: inline-block;
-	text-decoration: none;
-	width: 100%;
-	line-height: 3;
-	background-color: #edeff1;
-	color: black;
-	text-align: center;
-}
-
-.info-box li a:focus,
-.info-box li a:hover {
+	display: inline-flex;
+	align-items: flex-end;
+	justify-content: center;
+	width: 28px;
+	height: 34px;
+	margin-left: 5px;
+	line-height: 34px;
+	border: 1px solid #000;
 	background-color: #fff;
-	color: black;
+	opacity: .5;
 }
 
-.info-box li a.active {
-	background-color: #fff;
-	color: black;
+.number.active {
+	height: 48px;
+	opacity: .8;
 }
 
-.info-box .panels {
-	height: 900px;
-	position: relative;
-	clear: both;
-}
-
-.info-box > article {
-	position: absolute;
-	top: 0;
-	left: 0;
-	height: 900px;
-	padding: 10px;
-}
-
-.info-box .active-panel {
-	z-index: 1;
-}
-
-.layout1 {
-	width: 960px;
-	height: 300px;
-	position: relative;
-	box-sizing: border-box;
-	padding: 10px;
-}
-
-.left {
-	position: absolute;
-	top: 10px;
-	left: 0;
-	width: 180px;
-	height: 290px;
-	border: 1px solid #9e9e9e;
-}
-
-.right {
-	position: absolute;
-	top: 10px;
-	right: 0;
-	width: 220px;
-	height: 290px;
-	border: 1px solid #9e9e9e;
+.tabs {
+    height: 70px;
+    border-bottom: 1px solid #dddddd;
 }
 
 .main {
-	margin: 0 230px 0 190px;
-	height: 290px;
-	border: 1px solid #9e9e9e;
+    position: relative;
+    width: 960px;
+    height: 100%;
+    margin: 0 auto;
 }
 
-.layout2 {
-	display: flex;
-	width: 960px;
-	height: 300px;
-	box-sizing: border-box;
+.tabs-item.active {
+    border-color: #ccc;
+    border-bottom-color: #fff;
+    background-color: #fff;
+}
+.tabs-item {
+    float: left;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 51px;
+    padding: 0 30px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    background-color: #eeeeee;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    box-sizing: border-box;
 }
 
-.layout2 article {
-	width: 230px;
-	border: 1px solid #9e9e9e;
-	margin: 10px 10px 10px 0;
+.content .main {
+    padding-bottom: 20px;
 }
-
-.layout2 article:nth-of-type(4) {
-	margin-right: 0;
+.content-box {
+    display: flex;
 }
-
-.layout3 {
-	display: flex;
-	width: 960px;
-	height: 300px;
-	box-sizing: border-box;
+.content-item {
+    flex: 1;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 176px;
+    padding: 80px;
+    margin: 10px 10px 0 0;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
-
-.layout3 article {
-	width: 320px;
-	border: 1px solid #9e9e9e;
-	margin: 10px 10px 10px 0;
+.content-box:first-child .content-item:not(:last-child) {
+    flex: 1 25%;
 }
-
-.layout3 article:nth-of-type(3) {
-	margin-right: 0;
-}
-
 footer {
 	height: 120px;
 	background-color: #61C0BF;
