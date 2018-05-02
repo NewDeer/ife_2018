@@ -25,95 +25,43 @@
 			<div class="time">
 				<img src="https://wx3.sinaimg.cn/large/006ZA7Begy1fqvb22c9vyj30oo0dwdi7.jpg">
 			</div>
-			<div class="number">
-				<ul>
-					<li>1</li>
-					<li>2</li>
-					<li>3</li>
-					<li>4</li>
-				</ul>
-			</div>
 		</div>
-	</section>
-	<section class="info-box">
-		<ul>
-			<li><a href="#" class="active">Pgl</a></li>
-			<li><a href="#">Sli</a></li>
-			<li><a href="#">Zimo</a></li>
+		<ul class="numbers">
+			<li class="number">1</li>
+			<li class="number active">2</li>
+			<li class="number">3</li>
+			<li class="number">4</li>
 		</ul>
-		<div class="panels">
-			<article class="active-panel">
-				<section class="layout1">
-					<article class="left">
-						<p>This is Content 1</p>
-					</article>
-					<article class="main">
-						<p>MaybeContent 2</p>
-					</article>
-					<article class="right">
-						<p>Content 3</p>
-					</article>
-				</section>
-				<section class="layout2">
-					<article>
-						<p>Content 4</p>
-					</article>
-					<article>
-						<p>Content 5</p>
-					</article>
-					<article>
-						<p>Content 6</p>
-					</article>
-					<article>
-						<p>Content 7</p>
-					</article>
-				</section>
-				<section class="layout3">
-					<article>
-						<p>Content 8</p>
-					</article>
-					<article>
-						<p>Content 9</p>
-					</article>
-					<article>
-						<p>Content 10</p>
-					</article>
-				</section>
-			</article>
-			
-		</div>
 	</section>
+	<nav class="tabs">
+        <ul class="main">
+            <li class="tabs-item active">HOME</li>          
+            <li class="tabs-item">PROFILE</li>        
+            <li class="tabs-item">ABOUT</li>          
+        </ul>
+    </nav>
+		<section class="content">
+        <div class="main">
+            <div class="content-box">
+                <div class="content-item">This is Content 1</div>
+                <div class="content-item">Maybe Content 2</div>
+                <div class="content-item">Content 3</div>
+            </div>
+            <div class="content-box">
+                <div class="content-item">Content 4</div>
+                <div class="content-item">Content 5</div>
+                <div class="content-item">Content 6</div>
+                <div class="content-item">Content 7</div>
+            </div>
+            <div class="content-box">
+                <div class="content-item">Content 8</div>
+                <div class="content-item">Content 9</div>
+                <div class="content-item">Content 10</div>
+            </div>
+        </div>
+    	</section>
 	<footer>
 		<p>Made with by Deer</p>
 	</footer>
-	<script type="text/javascript">
-		var tabs = document.querySelectorAll('.info-box li a');
-		var panels = document.querySelectorAll('.info-box article');
-
-		for(i = 0; i < tabs.length; i++) {
-		  var tab = tabs[i];
-		  setTabHandler(tab, i);
-		}
-
-		function setTabHandler(tab, tabPos) {
-		  tab.onclick = function() {
-		    for(i = 0; i < tabs.length; i++) {
-		      if(tabs[i].getAttribute('class')) {
-		        tabs[i].removeAttribute('class');
-		      }
-		    }
-
-		    tab.setAttribute('class', 'active');
-
-		    for(i = 0; i < panels.length; i++) {
-		      if(panels[i].getAttribute('class')) {
-		        panels[i].removeAttribute('class');
-		      }
-		    }
-
-		    panels[tabPos].setAttribute('class', 'active-panel');
-		  }
-		}
-	</script>
 </body>
 </html>
