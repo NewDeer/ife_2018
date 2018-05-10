@@ -4,7 +4,6 @@
 
 body {
 	margin: 0;
-	
 	font-family: ProximaNova-Semibold;
 }
 
@@ -68,12 +67,11 @@ li {
 
 .menu {
 	width: 250px;
-	min-height: 1020px;
 	background-color: #222C3C;
 	margin-left: 100px;
 	margin-bottom: -9999px;
 	padding-bottom: 9999px;
-	overflow: hidden;
+	overflow: auto;
 	position: relative;
 }
 
@@ -99,7 +97,7 @@ li {
 }
 
 .menu dd {
-	margin: 20px 0;
+	margin: 10px 0;
 	color: #B7C0CD;
 	font-size: 14px;
 }
@@ -156,7 +154,7 @@ li {
 }
 
 .main-head {
-	position: fixed;
+	position: absolute;
 	top: 14px;
 	right: 80px;
 	display: flex;
@@ -184,6 +182,8 @@ li {
 
 .messages-content {
 	display: flex;
+	max-height: 750px;
+	overflow: auto;
 }
 
 .messages-list {
@@ -215,6 +215,10 @@ li {
 	position: absolute;
 	top: 25px;
 	right: 42px;
+}
+
+.left-list {
+	overflow: auto;
 }
 
 .contact {
@@ -305,6 +309,11 @@ li {
 	height: 30px;
 	border-left: 1px solid #E5E8EE;
 	margin: 0 20px;
+}
+
+.right-head {
+	max-height: 750px;
+	overflow: auto;
 }
 
 .right-text {
