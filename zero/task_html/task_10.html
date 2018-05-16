@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>9x9</title>
+</head>
+<body>
+	<table id="tab" border="1">
+		
+	</table>
+	<script type="text/javascript">
+		var a;
+		var b;
+		var c;
+		var mum = '';
+		for(a=1;a<=9;a++)
+		{
+			mum = mum + '<tr>';
+			for(b=1;b<=a;b++)
+			{
+				mum = mum + '<td>';
+				c = a * b;
+				console.log("%d * %d = %d",a, b, c);
+				mum = mum + a + '*' + b + '=' + c;
+				mum = mum + '</td>'
+			}
+			mum = mum + '</tr>';
+		}
+		document.getElementById("tab").innerHTML = mum;
+		var myDate = new Date();
+		myDate.getTime();
+		console.log(myDate);
+	</script>
+</body>
+</html>
