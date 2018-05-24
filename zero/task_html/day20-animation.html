@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>day20-animation</title>
+</head>
+<body>
+	<div id="rabbit" style="width: 480px;height: 480px"></div>
+	<button id="btn">暂停运动</button> 
+	<script type="text/javascript">
+		var url = 'http://ife.baidu.com/2016/static/img/erik_ce204002.jpg';
+		var positions = ['0,-480','0,-960','0,-1440','0,-1920','0,-2400','0,-2880','0,-3360','0,-3840','0,-4320','0,-4800','0,-5280','0,-5760','0,-6240','0,-6720','0,-7200','0,-7680','0,-8160'];
+		var ele = document.getElementById('rabbit');
+		var oTimer = null;
+		var btn = document.getElementById('btn');
+		
+		frameAnimation(ele,positions,url);
+		function frameAnimation(ele,positions,url){
+		  ele.style.backgroundImage = 'url(' + url + ')';
+		  ele.style.backgroundRepeat = 'no-repeat'; 
+		  var index = 0;
+		  function run(){
+		    var pos = positions[index].split(',');
+		    
+		    ele.style.backgroundPosition = pos[0] + 'px ' + pos[1] + 'px';
+		    console.log(ele.style.backgroundPosition)
+		    index++;
+		    if(index >= positions.length){
+		      index = 0;
+		    }
+		    oTimer = setTimeout(run,80);
+		  }
+		  run();
+		}  
+		btn.onclick = function(){
+		  if(btn.innerHTML == '开始运动'){
+		    frameAnimation(ele,positions,url);
+		    btn.innerHTML = '暂停运动';
+		  }else{
+		    clearTimeout(oTimer);
+		    btn.innerHTML = '开始运动';
+		  } 
+		}
+	</script>
+</body>
+</html>

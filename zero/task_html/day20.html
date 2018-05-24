@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fade-obj" style="width:300px;height:300px;background:#000"></div>
+    <button id="fade-btn">淡出</button>
+    <script type="text/javascript">
+        var btn = document.querySelector("#fade-btn");
+        var obj = document.querySelector("#fade-obj");
+        var id;
+        var op=1.0;
+        
+        btn.onclick=function down(){
+            if(this.innerHTML=="淡出"){
+                btn.disabled=true;
+                tip();
+            }
+            else {
+                btn.disabled=true;
+                up();
+
+            }
+        }
+        function tip(){
+            op=op-0.1;
+            obj.style.opacity=op;
+            if(op>=0){
+                setTimeout("tip()",100);
+                if(op<0.1){
+                    btn.disabled=false;
+                btn.innerHTML="淡入";
+                }
+            }
+        }
+        function up(){
+            op=op+0.1;
+            obj.style.opacity=op;
+            if(op<=1){
+                setTimeout("up()",100);
+                console.log(op);
+                if(op>0.9){
+                    btn.disabled=false;
+                btn.innerHTML="淡出";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
